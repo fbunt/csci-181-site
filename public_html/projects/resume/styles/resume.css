@@ -1,0 +1,83 @@
+body {
+    background-color: #f5f5f5;
+}
+
+.tel {
+    white-space: nowrap;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: 8.5in;
+}
+
+#resume_heading {
+    text-align: center;
+}
+
+.resume_box {
+    border: 1px solid darkgrey;
+    background-color: white;
+    padding: 30px;
+}
+
+.resume_content {
+}
+
+.resume_section {
+    border-bottom: 2px dashed lightgrey;
+}
+
+.personal_info {
+    border-top: 10px solid lightgrey;
+    /*border-bottom: 2px dashed lightgrey;*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.name_and_title {
+    padding-left: 15px;
+    width: 50%;
+    order: 1;
+}
+
+.name {
+    margin-bottom: 0.3em;
+}
+
+.job_title {
+    margin-top: 0;
+    font-style: italic;
+}
+
+.contact_info {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 45%;
+    order: 2;
+}
+
+.contact_info table {
+    width: 100%;
+    border-left: 1px solid lightgrey;
+}
+
+.contact_item {
+}
+
+.contact_item_header {
+    font-style: italic;
+    font-weight: normal;
+    text-align: left;
+    padding-left: 10px;
+    width: 50%;
+    border-bottom: 1px dotted lightgrey;
+}
+
+.contact_item_data {
+    border-bottom: 1px dotted lightgrey;
+}
