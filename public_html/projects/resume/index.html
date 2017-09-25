@@ -6,20 +6,22 @@
   <link rel="stylesheet" href="styles/resume.css">
 </head>
 <body>
-<div class="container">
+<article class="container">
   <header>
     <h1 id="resume-heading">Resume</h1>
   </header>
+
+  <!-- Resume -->
   <div class="resume-box">
     <div class="resume-content">
       <!-- Personal Information -->
       <header class="contact-section">
         <div class="personal-info">
           <!--Name and title -->
-          <div class="name-and-title">
+          <hgroup class="name-and-title">
             <h1 class="name">Fred Bunt</h1>
             <h4 class="job-title">Junior Software Engineer</h4>
-          </div>
+          </hgroup>
           <!-- Contact Info -->
           <div class="contact-info">
             <table>
@@ -33,14 +35,20 @@
                 <th class="contact-item-header">Email:</th>
                 <td class="contact-item-data">
                   <strong>
-                    <a href="mailto:fred.bunt@mail.com">fred.bunt@mail.com</a>
+                    <a href="mailto:fredrick.bunt@umontana.edu">
+                      fredrick.bunt@umontana.edu
+                    </a>
                   </strong>
                 </td>
               </tr>
               <tr class="contact-item">
                 <th class="contact-item-header">Address:</th>
                 <td class="contact-item-data">
-                  123 Html Dr.<br>Missoula, MT 59800
+                  <strong>
+                    <address>
+                      123 Html Dr.<br>Missoula, MT 59800
+                    </address>
+                  </strong>
                 </td>
               </tr>
             </table>
@@ -48,13 +56,15 @@
         </div>
       </header>
 
+      <!-- Work Experience -->
       <div class="exp-summary-container">
         <p class="experience-summary">
           5+ years working as a programmer and software engineer.
           Proficient with Java, Python, C++ and Android architecture.
         </p>
       </div>
-      <!-- Work Experience -->
+
+      <!-- Experience List -->
       <section class="resume-section">
         <div class="section-content-container">
           <div class="section-label-container">
@@ -65,12 +75,14 @@
             <!-- MSGC Job-->
             <div class="section-item-container">
               <div class="section-item-header">
-                <div class="item-dual-title-container">
+                <hgroup class="item-dual-title-container">
                   <h3 class="item-main-title">
                     Montana Space Grant Consortium
                   </h3>
-                  <h4 class="item-secondary-title">Fellowship</h4>
-                </div>
+                  <h4 class="item-secondary-title">
+                    Fellowship Research Assistant
+                  </h4>
+                </hgroup>
                 <div class="duration-container">
                   <p>
                     <time datetime="2017-07-00">July 2017</time>
@@ -82,7 +94,11 @@
               <div class="item-content">
                 <ul class="section-item-list">
                   <li>
-                    Worked on the MSGC Eclipse 2017 national balloon campaign
+                    Worked on the <em>MSGC Eclipse 2017</em> national balloon
+                    campaign
+                  </li>
+                  <li>
+                    Solved any mission critical software issues
                   </li>
                   <li>
                     Tested balloon payloads and video receiver base station
@@ -104,13 +120,15 @@
             <!-- UM - AASO Job -->
             <div class="section-item-container">
               <div class="section-item-header">
-                <div class="item-dual-title-container">
+                <hgroup class="item-dual-title-container">
                   <h3 class="item-main-title">
                     <span class="break-span">University of Montana,</span>
-                    <span class="break-span">Autonomous Arial Systems Office</span>
+                    <span class="break-span">
+                      Autonomous Arial Systems Office
+                    </span>
                   </h3>
                   <h4 class="item-secondary-title">Software Engineer</h4>
-                </div>
+                </hgroup>
                 <div class="duration-container">
                   <p>
                     <time datetime="2016-12-00">December 2016</time>
@@ -122,7 +140,10 @@
                 <ul class="section-item-list">
                   <li>
                     Write and maintain software tools for integrating field
-                    data into the weather simulation and prediction software, WRF
+                    data into the weather simulation and prediction software,
+                    <abbr title="Weather Research and Forecasting Model ">
+                      WRF
+                    </abbr>
                   </li>
                   <li>
                     Write project specific additions for the ArduPilot
@@ -142,10 +163,10 @@
             <!-- Anasphere Job -->
             <div class="section-item-container">
               <div class="section-item-header">
-                <div class="item-dual-title-container">
+                <hgroup class="item-dual-title-container">
                   <h3 class="item-main-title">Anasphere, Inc.</h3>
                   <h4 class="item-secondary-title">Software Engineer</h4>
-                </div>
+                </hgroup>
                 <div class="duration-container">
                   <p>
                     <time datetime="2013-05-00">May 2013</time>
@@ -162,7 +183,8 @@
                   <li>
                     Help with research and development for novel atmospheric
                     measurement devices by writing any necessary software,
-                    performing data analysis and deriving mathematical models
+                    performing data analysis and deriving and implementing
+                    mathematical models
                   </li>
                   <li>
                     Wrote LiteTether, a scaled down version of SmartTether for
@@ -174,13 +196,48 @@
 
             <hr class="job-list-divider">
 
+            <!-- MSGC Job-->
+            <div class="section-item-container">
+              <div class="section-item-header">
+                <hgroup class="item-dual-title-container">
+                  <h3 class="item-main-title">
+                    <span class="break-span">University of Montana</span>
+                    <span class="break-span">
+                      Center for Environmental Health Sciences
+                    </span>
+                  </h3>
+                  <h4 class="item-secondary-title">
+                    Independent Contractor
+                  </h4>
+                </hgroup>
+                <div class="duration-container">
+                  <p>
+                    <time datetime="2014-02-00">February 2013</time>
+                    -
+                    <time datetime="2015-07-00">July 2015</time>
+                  </p>
+                </div>
+              </div>
+              <div class="item-content">
+                <ul class="section-item-list">
+                  <li>
+                    Automated the air and smoke mixing system for a woodsmoke
+                    exposure chamber using National Instruments instrumentation
+                    and the LabVIEW programming platform
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <hr class="job-list-divider">
+
             <!-- Anasphere Internship -->
             <div class="section-item-container">
               <div class="section-item-header">
-                <div class="item-dual-title-container">
+                <hgroup class="item-dual-title-container">
                   <h3 class="item-main-title">Anasphere, Inc.</h3>
                   <h4 class="item-secondary-title">Research Intern</h4>
-                </div>
+                </hgroup>
                 <div class="duration-container">
                   <p>
                     <time datetime="2013-01-00">January 2013</time>
@@ -192,12 +249,19 @@
               <div class="item-content">
                 <ul class="section-item-list">
                   <li>
-                    Missile Defense Agency SBIR Phase I: Atmospheric
-                    Characterization for Directed Energy Applications
+                    Missile Defense Agency
+                    <abbr title="Small Business Innovation Research">
+                      SBIR
+                    </abbr>
+                    Phase I: Atmospheric Characterization for Directed Energy
+                    Applications
                   </li>
                   <li>
-                    Used the weather modeling program WRF to characterize
-                    optical turbulence in the atmosphere
+                    Used the weather modeling program
+                    <abbr title="Weather Research and Forecasting Model ">
+                      WRF
+                    </abbr>
+                    to characterize optical turbulence in the atmosphere
                   </li>
                 </ul>
               </div>
@@ -208,13 +272,13 @@
             <!-- Physics Internship -->
             <div class="section-item-container">
               <div class="section-item-header">
-                <div class="item-dual-title-container">
+                <hgroup class="item-dual-title-container">
                   <h3 class="item-main-title">
                     <span class="break-span">University of Montana,</span>
                     <span class="break-span">Physics Dept.</span>
                   </h3>
                   <h4 class="item-secondary-title">Research Intern</h4>
-                </div>
+                </hgroup>
                 <div class="duration-container">
                   <p>
                     <time datetime="2011-04-00">April 2011</time>
@@ -254,14 +318,17 @@
           <div class="section-main-content-container">
             <div class="section-item-container">
               <div class="section-item-header">
-                <div class="item-dual-title-container">
+                <hgroup class="item-dual-title-container">
                   <h3 class="item-main-title">University of Montana</h3>
                   <h4 class="item-secondary-title">
                     <span class="break-span">Bachelor of Arts (BA),</span>
                     <span class="break-span">Physics,</span>
-                    <span class="break-span">In-Major GPA: 3.82</span>
+                    <span class="break-span">
+                      In-Major <abbr title="Grade Point Average">GPA</abbr>:
+                      <data value="3.82">3.82</data>
+                    </span>
                   </h4>
-                </div>
+                </hgroup>
                 <div class="duration-container">
                   <p>
                     <time datetime="2008-08-00">2008</time>
@@ -271,13 +338,12 @@
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </section>
 
       <!-- Skills -->
-      <section class="resume-section padding-10-bottom">
+      <section class="resume-section">
         <div class="section-content-container">
           <div class="section-label-container">
             <h4 class="section-label">Skills</h4>
@@ -287,17 +353,63 @@
               <div class="item-content">
                 <ul class="section-item-list">
                   <li>Proficient Languages: Java, Python, C++</li>
-                  <li>Working knowledge of C and Fortran</li>
+                  <li>Working knowledge of C, Fortran and LabVIEW</li>
                   <li>Experience in Android Development</li>
-                  <li>Extensive experience with Unix-like systems</li>
+                  <li>Extensive experience with Unix-like environments</li>
                 </ul>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      <!-- References -->
+      <section class="resume-section">
+        <div class="section-content-container">
+          <div class="section-label-container">
+            <h4 class="section-label">References</h4>
+          </div>
+          <div class="section-main-content-container">
+            <div class="section-item-container">
+              <div class="item-content">
+                <dl class="section-description-list">
+                  <dt>Jen Fowler</dt>
+                  <dd>
+                    Director of Autonomous Arial Systems Office<br>
+                    University of Montana<br>
+                    <a href="mailto:jennifer.fowler@umontana.edu">
+                      jennifer.fowler@umontana.edu
+                    </a>
+                    <br>
+                    Project Lead
+                  </dd>
+                  <dt>Andrew Ware</dt>
+                  <dd>
+                    Department Chair<br>
+                    University of Montana, Department of Physics<br>
+                    <a href="mailto:andrew.ware@umontana.edu">
+                      andrew.ware@umontana.edu
+                    </a>
+                    <br>
+                    Former professor and research adviser
+                  </dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </div>
   </div>
-</div>
+</article>
+
+<footer class="resume-footer">
+  <p>
+    <small>Updated
+      <time datetime="2017-09-25">9/25/2017</time>
+    </small>
+  </p>
+</footer>
 </body>
 </html>

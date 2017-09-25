@@ -97,6 +97,10 @@ body {
     border-bottom: 1px dotted lightgrey;
 }
 
+.contact-item-data address {
+    font-style: normal;
+}
+
 /* Skills and experience description */
 
 .exp-summary-container {
@@ -191,6 +195,20 @@ body {
     border-color: lightgrey;
 }
 
-.padding-10-top-bot {
-    padding-bottom: 10px;
+.section-description-list {
+    margin: 0;
+}
+
+.section-description-list dt {
+    font-weight: bold;
+}
+
+.section-description-list dd {
+    margin: 0 0 10px 0;
+}
+
+.resume-footer p {
+    margin: 1em 0;
+    text-align: center;
+    font-style: italic;
 }
