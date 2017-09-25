@@ -96,7 +96,8 @@ body {
 /* Skills and experience description */
 
 .exp-summary-container {
-    margin: 1em 0;
+    margin: 15px 0;
+    padding-bottom: 1em;
 }
 
 .experience-summary {
@@ -112,8 +113,8 @@ body {
 }
 
 .experience-title-container {
-    order: 1;
     width: 20%;
+    order: 1;
 }
 
 .section-title {
@@ -127,8 +128,6 @@ body {
 .experience-list-container {
     width: 80%;
     order: 2;
-    /*margin-left: 10px;*/
-    /*margin-right: 10px;*/
 }
 
 .job-item-container {
@@ -171,4 +170,19 @@ body {
     text-align: right;
     text-transform: uppercase;
     color: grey;
+}
+
+.job-description {
+    margin: 0;
+    padding: 0 15px;
+}
+
+.job-description-list {
+    margin: 0 0 0 20px;
+    padding: 0;
+}
+
+.job-list-divider {
+    border-style: dotted none none none;
+    border-color: lightgrey;
 }
