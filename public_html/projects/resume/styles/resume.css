@@ -37,13 +37,18 @@ body {
 
 .resume-section {
     border-bottom: 2px dashed lightgrey;
+    padding: 12px 0;
+}
+
+.contact-section {
+    border-bottom: 2px dashed lightgrey;
 }
 
 /* Personal Info Section */
 
 .personal-info {
     border-top: 10px solid lightgrey;
-    padding: 1.25em 0;
+    padding: 15px 0;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -105,19 +110,19 @@ body {
     padding-left: 10px;
 }
 
-.experience-container {
+.section-content-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-item: flex-start;
 }
 
-.experience-title-container {
+.section-label-container {
     width: 20%;
     order: 1;
 }
 
-.section-title {
+.section-label {
     font-size: 14px;
     font-weight: normal;
     font-style: italic;
@@ -125,22 +130,22 @@ body {
     padding-left: 10px;
 }
 
-.experience-list-container {
+.section-main-content-container {
     width: 80%;
     order: 2;
 }
 
-.job-item-container {
+.section-item-container {
     padding: 10px 0 10px 0;
 }
 
-.job-header {
+.section-item-header {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
 
-.job-name-title-container {
+.item-dual-title-container {
     width: 50%;
     padding-left: 15px;
     padding-right: 15px;
@@ -148,16 +153,16 @@ body {
     flex-grow: 2;
 }
 
-.company-name {
+.item-main-title {
     margin: 0 0 0.35em 0;
 }
 
-.company-title {
+.item-secondary-title {
     margin: 0 0 0.35em 0;
     color: grey;
 }
 
-.job-duration-container {
+.duration-container {
     width: 30%;
     padding: 0 10px;
     margin: 0;
@@ -165,19 +170,19 @@ body {
     flex-grow: 1;
 }
 
-.job-duration-container p {
+.duration-container p {
     margin: 0;
     text-align: right;
     text-transform: uppercase;
     color: grey;
 }
 
-.job-description {
+.item-content {
     margin: 0;
     padding: 0 15px;
 }
 
-.job-description-list {
+.section-item-list {
     margin: 0 0 0 20px;
     padding: 0;
 }
@@ -185,4 +190,8 @@ body {
 .job-list-divider {
     border-style: dotted none none none;
     border-color: lightgrey;
+}
+
+.padding-10-top-bot {
+    padding-bottom: 10px;
 }
