@@ -1,0 +1,103 @@
+html, body {
+    /*height: 100%;*/
+    background-color: #ebeff1;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+}
+
+img {
+    /* Remove space caused by link wrapper*/
+    vertical-align: bottom
+}
+
+.photobook-container {
+}
+
+.book-header {
+    margin: auto;
+}
+
+.main-header {
+    text-align: center;
+}
+
+.main-heading {
+    margin-bottom: 0;
+}
+
+.main_subheading {
+    margin-top: 0;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.content-section {
+    margin: 10px 20px;
+    padding: 2px 16px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.card:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.content-section p {
+    margin: 5px 0;
+}
+
+.card-content {
+    padding: 5px 10px;
+}
+
+.image-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.list-item-container {
+    margin: 8px;
+}
+
+.book-container {
+    margin: auto;
+    padding-bottom: 40px;
+    /*height: 100%;*/
+    width: 70%;
+}
+
+.book-description {
+    text-align: center;
+    margin: auto 40px;
+}
+
+.page-content {
+    margin: auto;
+    width: 70%;
+    text-align: center;
+}
+
+.page-content p {
+    margin: 20px auto;
+    width: 720px;
+}
+
+footer {
+    margin: auto auto 30px auto;
+    text-align: center;
+}
