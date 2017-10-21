@@ -1,0 +1,215 @@
+body {
+    background-color: #f5f5f5;
+}
+
+.tel {
+    white-space: nowrap;
+}
+
+.break-span {
+    display: inline-block;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 8.5in;
+}
+
+#resume-heading {
+    text-align: center;
+}
+
+/* Resume Content */
+
+.resume-box {
+    /*border: 1px solid darkgrey;*/
+    background-color: white;
+    padding: 30px 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.resume-content {
+    font-size: 14px;
+    font-family: "Times New Roman", Georgia, Serif;
+}
+
+.resume-section {
+    border-bottom: 2px dashed lightgrey;
+    padding: 12px 0;
+}
+
+.contact-section {
+    border-bottom: 2px dashed lightgrey;
+}
+
+/* Personal Info Section */
+
+.personal-info {
+    border-top: 10px solid lightgrey;
+    padding: 15px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.name-and-title {
+    padding-left: 15px;
+    width: 50%;
+    order: 1;
+}
+
+.name {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 28px;
+}
+
+.job-title {
+    margin-top: 5px;
+    font-style: italic;
+}
+
+.contact-info {
+    width: 45%;
+    order: 2;
+}
+
+.contact-info table {
+    width: 100%;
+    border-left: 1px solid lightgrey;
+}
+
+.contact-item {
+}
+
+.contact-item-header {
+    font-style: italic;
+    font-weight: normal;
+    text-align: left;
+    padding-left: 10px;
+    width: 50%;
+    border-bottom: 1px dotted lightgrey;
+}
+
+.contact-item-data {
+    border-bottom: 1px dotted lightgrey;
+}
+
+.contact-item-data address {
+    font-style: normal;
+}
+
+/* Skills and experience description */
+
+.exp-summary-container {
+    margin: 15px 0;
+    padding-bottom: 1em;
+}
+
+.experience-summary {
+    margin: 0;
+    padding-left: 10px;
+}
+
+.section-content-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-item: flex-start;
+}
+
+.section-label-container {
+    width: 20%;
+    order: 1;
+}
+
+.section-label {
+    font-size: 14px;
+    font-weight: normal;
+    font-style: italic;
+    margin: 10px auto;
+    padding-left: 10px;
+}
+
+.section-main-content-container {
+    width: 80%;
+    order: 2;
+}
+
+.section-item-container {
+    padding: 10px 0 10px 0;
+}
+
+.section-item-header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.item-dual-title-container {
+    width: 50%;
+    padding-left: 15px;
+    padding-right: 15px;
+    order: 1;
+    flex-grow: 2;
+}
+
+.item-main-title {
+    margin: 0 0 0.35em 0;
+}
+
+.item-secondary-title {
+    margin: 0 0 0.35em 0;
+    color: grey;
+}
+
+.duration-container {
+    width: 30%;
+    padding: 0 10px;
+    margin: 0;
+    order: 2;
+    flex-grow: 1;
+}
+
+.duration-container p {
+    margin: 0;
+    text-align: right;
+    text-transform: uppercase;
+    text-decoration: underline;
+    color: grey;
+}
+
+.item-content {
+    margin: 0;
+    padding: 0 15px;
+}
+
+.section-item-list {
+    margin: 0 0 0 20px;
+    padding: 0;
+}
+
+.job-list-divider {
+    border-style: dotted none none none;
+    border-color: lightgrey;
+}
+
+.section-description-list {
+    margin: 0;
+}
+
+.section-description-list dt {
+    font-weight: bold;
+}
+
+.section-description-list dd {
+    margin: 0 0 10px 0;
+}
+
+.resume-footer p {
+    margin: 1em 0;
+    text-align: center;
+    font-style: italic;
+}
