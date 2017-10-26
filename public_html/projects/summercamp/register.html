@@ -2,9 +2,189 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Registration</title>
+  <title>OUC Registration</title>
+  <style>
+    body {
+      background-color: #2a3751;
+      color: white;
+      font-family: FuturaNo2D, century gothic, arial, sans-serif;
+    }
+
+    section {
+      padding: 30px 12px;
+      border-top: 1px solid #00a5e2;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      margin: 10px 0;
+    }
+
+    section > h2 {
+      margin-bottom: 30px;
+    }
+
+    a {
+      color: #ffc466;
+    }
+
+    a:active, a:visited {
+      color: #ffc466;
+    }
+
+    header {
+      text-align: center;
+    }
+
+    nav {
+      margin: 10px;
+    }
+
+    #nav-list {
+      list-style: none;
+      display: flex;
+      font-size: 1.3em;
+      margin: 0;
+      padding: 0;
+      justify-content: center;
+    }
+
+    #nav-list li {
+      margin: auto 10px;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+  </style>
 </head>
 <body>
+
+<div id="main-container">
+  <header>
+    <img src="images/overwatch_u.png" alt="Overwatch University header image"/>
+    <div title="title-container">
+      <h1>Overwatch University Camp 2018</h1>
+      <h3>
+        <time datetime=" 2018-06-25">6/25</time>
+        -
+        <time datetime=" 2018-06-29">6/29</time>
+        , 2018
+      </h3>
+    </div>
+    <nav>
+      <ul id="nav-list">
+        <li><a href="./#" class="nav-link">Home</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="form-area">
+    <form>
+      <fieldset>
+        <legend>Personal Info</legend>
+        <ul>
+          <li>
+            <label for="form-first-name">First Name:</label>
+            <input type="text" name="first-name" id="form-first-name">
+          </li>
+          <li>
+            <label for="form-last-name">Last Name:</label>
+            <input type="text" name="first-name" id="form-last-name">
+          </li>
+          <li>
+            <label>
+              Gender:
+              <input type="radio" name="gender" value="female"> Female
+              <input type="radio" name="gender" value="male"> Male
+            </label>
+          </li>
+          <li>
+            <label for="form-dob">Date of Birth:</label>
+            <input type="date" name="form-dob" id="form-dob">
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset>
+        <legend>Contact Info</legend>
+        <ul>
+          <li>
+            <label for="form-email">Email Address:
+              <input type="email" name="emailaddress" id="form-email">
+            </label>
+          </li>
+          <li>
+            <label for="form-telephone">Phone Number:
+              <input type="text" name="telephone" id="form-telephone">
+            </label>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset>
+        <legend>Overwatch Info</legend>
+        <ul>
+          <li>
+            <label for="form-played-before">Played Overwatch before:</label>
+            <input type="checkbox" name="form-played-before"
+                   id="form-played-before" value="yes">
+          </li>
+          <li>
+            <label for="form-fav-hero">Favorite Character:</label>
+            <select name="form-fav-hero" id="form-fav-hero">
+              <option></option>
+              <option>None</option>
+              <option>Ana‎</option>
+              <option>Bastion‎</option>
+              <option>D.Va‎</option>
+              <option>Doomfist‎</option>
+              <option>Genji</option>
+              <option>Hanzo‎</option>
+              <option>Junkrat</option>
+              <option>Lúcio‎</option>
+              <option>McCree</option>
+              <option>Mei</option>
+              <option>Mercy</option>
+              <option>Orisa‎</option>
+              <option>Pharah‎</option>
+              <option>Reaper‎</option>
+              <option>Reinhardt</option>
+              <option>Roadhog‎</option>
+              <option>Soldier</option>
+              <option>Sombra‎</option>
+              <option>Symmetra‎</option>
+              <option>Torbjörn‎</option>
+              <option>Tracer</option>
+              <option>Widowmaker‎</option>
+              <option>Winston‎</option>
+              <option>Zarya‎</option>
+              <option>Zenyatta‎</option>
+            </select>
+          </li>
+          <li>
+            <label>Preferred classes (check all that apply):
+              <ul class="check-list">
+                <li><input type="checkbox" name="form-pref-class">Offense</li>
+                <li><input type="checkbox" name="form-pref-class">Defense</li>
+                <li><input type="checkbox" name="form-pref-class">Tank</li>
+                <li><input type="checkbox" name="form-pref-class">Support</li>
+              </ul>
+            </label>
+          </li>
+          <li>
+            <label for="form-explanation">Why is it Lucio?</label><br>
+            <textarea name="" placeholder="No more than 300 characters"
+                      rows="4" cols="60" maxlength="300"
+                      id="form-explanation"></textarea>
+          </li>
+        </ul>
+      </fieldset>
+
+      <p>
+        <input type="submit">
+        <input type="reset">
+      </p>
+    </form>
+  </section>
+</div>
 
 </body>
 </html>
