@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+
+body {
+  font-family: "Merriweather", Georgia, "Times New Roman", serif;
+  font-size: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Lato", Helvetica, sans-serif;
+}
+
+h3 {
+  margin: 0;
+}
+
+h3 + p {
+  margin-top: 5px;
+}
+
+figure {
+  width: 100%;
+  margin: 10px;
+  text-align: center;
+}
+
+figure img {
+  display: inline;
+}
+
+a {
+  text-decoration: none;
+}
+
+.content {
+  display: block;
+  margin-bottom: 40px;
+}
+
+.post-header {
+  padding: 5px 20px;
+  max-width: 46rem;
+  margin: auto;
+  background: url("../images/buildapc_bg.jpg") no-repeat 48% 0;
+  background-size: cover;
+  color: white;
+}
+
+.post-title {
+  font-size: 2.5em;
+  font-weight: 900;
+}
+
+.post-author {
+  margin: 0;
+  text-shadow: -1px -1px grey
+}
+
+.post-date {
+  margin: 0;
+  text-shadow: -1px -1px grey;
+}
+
+.post-body {
+  max-width: 42rem;
+  margin: auto;
+}
+
+.table-of-contents {
+  list-style-type: none;
+  padding-left: 15px;
+}
+
+.post-section {
+  margin: 16px 0
+}
