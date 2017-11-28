@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>OUC Registration</title>
+  <style>
+    body {
+      font-size: 100%;
+      background-color: #2a3751;
+      color: white;
+      font-family: FuturaNo2D, century gothic, arial, sans-serif;
+    }
+
+    section {
+      padding: 30px 12px;
+      border-top: 1px solid #00a5e2;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      margin: 10px 0;
+    }
+
+    section > h2 {
+      margin-bottom: 30px;
+    }
+
+    a {
+      color: #ffc466;
+    }
+
+    a:active, a:visited {
+      color: #ffc466;
+    }
+
+    header {
+      text-align: center;
+    }
+
+    nav {
+      margin: 10px;
+    }
+
+    legend {
+      color: #ffc466;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    #nav-list {
+      list-style: none;
+      display: flex;
+      font-size: 1.3em;
+      margin: 0;
+      padding: 0;
+      justify-content: center;
+    }
+
+    #nav-list li {
+      margin: auto 10px;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    .validation-msg {
+      display: inline;
+      font-size: .6em;
+    }
+
+    .fw-normal {
+      font-weight: normal;
+    }
+
+    .fw-bold {
+      font-weight: bold;
+    }
+
+    .post-msg {
+      display: inline;
+      padding-left: 10px;
+    }
+
+    .img-row {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+
+    .img-row div {
+      padding: 3px 5px;
+    }
+
+    .inline {
+      display: inline;
+    }
+
+    .required:after {
+      color: #e32;
+      content: ' *';
+      display:inline;
+    }
+  </style>
+  <script src="scripts/register.js" type="text/javascript"></script>
+</head>
+
+<body onload="onLoad()">
+
+<div id="main-container">
+  <header>
+    <img src="images/overwatch_u.png" alt="Overwatch University header image"/>
+    <div title="title-container">
+      <h1>Overwatch University Camp 2018</h1>
+      <h3>
+        <time datetime=" 2018-06-25">6/25</time> -
+        <time datetime=" 2018-06-29">6/29</time>, 2018
+      </h3>
+    </div>
+    <nav>
+      <ul id="nav-list">
+        <li><a href="./#" class="nav-link">Home</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="form-area">
+    <form onsubmit="validateForm()">
+
+      <!-- Personal Information -->
+      <fieldset>
+        <legend>Personal Info</legend>
+        <ul>
+          <li>
+            <label for="form-first-name" class="required">First Name:</label>
+            <input type="text" name="first-name" id="form-first-name">
+          </li>
+          <li>
+            <label for="form-last-name" class="required">Last Name:</label>
+            <input type="text" name="first-name" id="form-last-name">
+          </li>
+          <li>
+            <label class="required">Gender:</label>
+            <input type="radio" name="gender" value="female" id="form-female">
+            <label for="form-female" class="fw-normal">Female</label>
+            <input type="radio" name="gender" value="male" id="form-male">
+            <label for="form-male" class="fw-normal">Male</label>
+          </li>
+          <li>
+            <label for="form-age" class="required">Age:</label>
+            <select name="form-age" id="form-age"
+                    onchange="updateAgeGroup(this)">
+              <option></option>
+            </select>
+          </li>
+          <li>
+            <label class="required">Group:</label>
+            <div class="inline" id="age-group"></div>
+          </li>
+        </ul>
+      </fieldset>
+
+      <!--Contact Information -->
+      <fieldset>
+        <legend>Contact Info</legend>
+        <ul>
+          <li>
+            <label for="form-email" class="required">Email Address:</label>
+            <input type="email" name="emailaddress" id="form-email">
+          </li>
+          <li>
+            <label for="form-telephone" class="required">Phone Number:</label>
+            <input type="text" name="telephone" id="form-telephone">
+          </li>
+        </ul>
+      </fieldset>
+
+      <!-- General Information -->
+      <fieldset>
+        <legend>General Info</legend>
+        <ul>
+          <li>
+            <div id="username">
+              <label for="form-username" class="required">Username:</label>
+              <input type="text" name="username" id="form-username"
+                     onkeyup="checkUsername()">
+              <div class="validation-msg" id="username-msg"></div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <label class="required">T-Shirt Size:</label>
+              <input type="radio" name="t-size" value="0" id="form-size-s"
+                     onclick="updateTShirtCost(this)">
+              <label for="form-size-s" class="fw-normal">S</label>
+              <input type="radio" name="t-size" value="1" id="form-size-m"
+                     onclick="updateTShirtCost(this)">
+              <label for="form-size-m" class="fw-normal">M</label>
+              <input type="radio" name="t-size" value="2" id="form-size-l"
+                     onclick="updateTShirtCost(this)">
+              <label for="form-size-l" class="fw-normal">L</label>
+              <input type="radio" name="t-size" value="3" id="form-size-xl"
+                     onclick="updateTShirtCost(this)">
+              <label for="form-size-xl" class="fw-normal">XL</label>
+              <input type="radio" name="t-size" value="4" id="form-size-xxl"
+                     onclick="updateTShirtCost(this)">
+              <label for="form-size-xxl" class="fw-normal">XXL</label>
+
+              <div class="post-msg" id="t-shirt-cost"></div>
+            </div>
+          </li>
+        </ul>
+      </fieldset>
+
+      <!-- Overwatch Information -->
+      <fieldset>
+        <legend>Overwatch Info</legend>
+        <ul>
+          <li>
+            <label for="form-played-before">
+              Played Overwatch before:
+            </label>
+            <input type="checkbox" name="form-played-before"
+                   id="form-played-before" value="yes">
+          </li>
+          <li>
+            <label class="required">
+              Preferred classes (check all that apply):
+            </label>
+            <ul class="check-list">
+              <li>
+                <input type="checkbox" name="form-pref-class" value="offense"
+                       id="form-offense" onclick="displayClass(this)">
+                <label for="form-offense" class="fw-normal">Offense</label>
+              </li>
+              <li>
+                <input type="checkbox" name="form-pref-class" value="defense"
+                       id="form-defense" onclick="displayClass(this)">
+                <label for="form-defense" class="fw-normal">Defense</label>
+              </li>
+              <li>
+                <input type="checkbox" name="form-pref-class" value="tank"
+                       id="form-tank" onclick="displayClass(this)">
+                <label for="form-tank" class="fw-normal">Tank</label>
+              </li>
+              <li>
+                <input type="checkbox" name="form-pref-class" value="support"
+                       id="form-support" onclick="displayClass(this)">
+                <label for="form-support" class="fw-normal">Support</label>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <div class="img-row">
+          <div id="offense"></div>
+          <div id="defense"></div>
+          <div id="tank"></div>
+          <div id="support"></div>
+        </div>
+        <ul>
+          <li>
+            <label for="form-fav-hero" class="required">Favorite Character:</label>
+            <select name="form-fav-hero" id="form-fav-hero">
+              <option>None</option>
+              <option>Ana‎</option>
+              <option>Bastion‎</option>
+              <option>D.Va‎</option>
+              <option>Doomfist‎</option>
+              <option>Genji</option>
+              <option>Hanzo‎</option>
+              <option>Junkrat</option>
+              <option>Lúcio‎</option>
+              <option>McCree</option>
+              <option>Mei</option>
+              <option>Mercy</option>
+              <option>Orisa‎</option>
+              <option>Pharah‎</option>
+              <option>Reaper‎</option>
+              <option>Reinhardt</option>
+              <option>Roadhog‎</option>
+              <option>Soldier 76</option>
+              <option>Sombra‎</option>
+              <option>Symmetra‎</option>
+              <option>Torbjorn‎</option>
+              <option>Tracer</option>
+              <option>Widowmaker‎</option>
+              <option>Winston‎</option>
+              <option>Zarya‎</option>
+              <option>Zenyatta‎</option>
+            </select>
+          </li>
+          <li>
+            <label for="form-explanation" class="required">
+              Why is it Lucio?
+            </label>
+            <br>
+            <textarea name="" placeholder="No more than 300 characters"
+                      rows="4" cols="60" maxlength="300"
+                      id="form-explanation"></textarea>
+          </li>
+        </ul>
+      </fieldset>
+
+      <p>
+        <button name="submit" type="submit">Register Now</button>
+        <button name="cancel" type="reset">Cancel</button>
+      </p>
+    </form>
+  </section>
+</div>
+
+</body>
+</html>

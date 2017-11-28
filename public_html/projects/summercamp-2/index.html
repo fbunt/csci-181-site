@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Overwatch U Camp</title>
+  <style>
+    body {
+      background-color: #2a3751;
+      color: white;
+      font-family: FuturaNo2D, century gothic, arial, sans-serif;
+    }
+
+    section {
+      padding: 30px 12px;
+      text-align: center;
+      border-top: 1px solid #00a5e2;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      margin: 10px 0;
+    }
+
+    section > h2 {
+      margin-bottom: 30px;
+    }
+
+    a {
+      color: #ffc466;
+    }
+
+    a:active, a:visited {
+      color: #ffc466;
+    }
+
+    header {
+      text-align: center;
+    }
+
+    nav {
+      margin: 10px;
+    }
+
+    #nav-list {
+      list-style: none;
+      display: flex;
+      font-size: 1.3em;
+      margin: 0;
+      padding: 0;
+      justify-content: center;
+    }
+
+    #nav-list li {
+      margin: auto 10px;
+    }
+
+    #description-area p {
+      max-width: 60%;
+      margin: auto;
+    }
+
+    #team-area {
+      text-align: center;
+    }
+
+    .team-list {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+
+    .team-element {
+      flex-grow: 1;
+      flex-basis: 0;
+      margin: 5px;
+    }
+
+    .circle {
+      border-radius: 50%;
+    }
+
+    table {
+      border-collapse: collapse;
+      text-align: left;
+    }
+
+    td, th {
+      border: 1px solid #ff9c00;
+      padding: 8px;
+    }
+
+    th {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<div id="main-container">
+  <header>
+    <img src="images/overwatch_u.png" alt="Overwatch University header image"/>
+    <div title="title-container">
+      <h1>Overwatch University Camp 2018</h1>
+      <h3>
+        <time datetime=" 2018-06-25">6/25</time>
+        -
+        <time datetime=" 2018-06-29">6/29</time>
+        , 2018
+      </h3>
+    </div>
+    <nav>
+      <ul id="nav-list">
+        <li><a href="./#" class="nav-link">Home</a></li>
+        <li><a href="#team-area" class="nav-link">The Team</a></li>
+        <li><a href="#schedule-area" class="nav-link">Schedule</a></li>
+        <li><a href="register.html" class="nav-link">Register</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div id="home-content">
+    <section id="description-area">
+      <h2>The Camp</h2>
+      <p>
+        Come take a crash course in competitive Overwatch! Based in sunny Irvin,
+        California, the home of Blizzard Entertainment, we offer an amazing week
+        long camp for anyone looking to improve their competitive skills.
+        Whether you're brand new to the game or an experienced salt miner,
+        you'll be sure to learn here.
+      </p>
+    </section>
+
+    <section id="team-area">
+      <h2>Our Team</h2>
+      <div class="team-list">
+        <div class="team-element">
+          <img class="circle" src="images/Megan.png" alt="Team member Megan"
+               width="200" height="200"/>
+          <h3>
+            Megan - Main:
+            <a href="https://playoverwatch.com/en-us/heroes/mccree/">McCree</a>
+          </h3>
+          <p>Camp leader and top 100 player the last three seasons</p>
+        </div>
+        <div class="team-element">
+          <img class="circle" src="images/Fred.jpg" alt="Team member Fred"
+               width="200" height="200"/>
+          <h3>
+            Fred - Main:
+            <a href="https://playoverwatch.com/en-us/heroes/zarya/">Zarya</a>
+          </h3>
+          <p>All around tank and booping enthusiast</p>
+        </div>
+        <div class="team-element">
+          <img class="circle" src="images/Cueball.png" alt="Team member Cueball"
+               width="200" height="200"/>
+          <h3>
+            Cueball - Main:
+            <a href="https://playoverwatch.com/en-us/heroes/ana/">Ana</a>
+          </h3>
+          <p>Everybody's favorite healer and flex player</p>
+        </div>
+        <div class="team-element">
+          <img class="circle" src="images/BlackHat.png"
+               alt="Team member Black hat" width="200" height="200"/>
+          <h3>
+            Black Hat - Main:
+            <a href="https://playoverwatch.com/en-us/heroes/mei/">Mei</a>
+          </h3>
+          <p>Passive: raising the enemy's sodium levels</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="schedule-area">
+      <h2>Schedule</h2>
+      <table>
+        <tr>
+          <th scope="col">Time</th>
+          <th scope="col">Monday</th>
+          <th scope="col">Tuesday</th>
+          <th scope="col">Wednesday</th>
+          <th scope="col">Thursday</th>
+          <th scope="col">Friday</th>
+        </tr>
+        <tr>
+          <td>Morning</td>
+          <td>
+            Game basics, Mic etiquette,
+            using mouse and keyboard, quick play
+            tracking
+          </td>
+          <td>Group quick play</td>
+          <td>Group quick play</td>
+          <td>Group tactics and strategies</td>
+          <td>Tournament</td>
+        </tr>
+        <tr>
+          <td>Noon</td>
+          <td>Lunch</td>
+          <td>Lunch</td>
+          <td>Lunch</td>
+          <td>Lunch</td>
+          <td>Lunch</td>
+        </tr>
+        <tr>
+          <td>Afternoon</td>
+          <td>
+            Class and hero overviews,<br>
+            group arcade and quick play
+          </td>
+          <td>Introduction to combos and combo practice</td>
+          <td>
+            Common team compositions and picking the right counter,
+            dealing with a Pro-Genji
+          </td>
+          <td>Team competitive placement matches and competitive play</td>
+          <td>Tournament</td>
+        </tr>
+        <tr>
+          <td>Evening</td>
+          <td>Team scrimmages</td>
+          <td>Team scrimmages</td>
+          <td>Team scrimmages</td>
+          <td>Team competitive play</td>
+          <td>Tournament</td>
+        </tr>
+      </table>
+    </section>
+  </div>
+</div>
+
+</body>
+</html>
