@@ -88,6 +88,7 @@
       flex-wrap: wrap;
       flex-direction: row;
       justify-content: flex-start;
+      padding-left: 40px;
     }
 
     .img-row div {
@@ -101,7 +102,12 @@
     .required:after {
       color: #e32;
       content: ' *';
-      display:inline;
+      display: inline;
+    }
+
+    .side-text {
+      font-size: 0.8em;
+      padding-left: 10px;
     }
   </style>
   <script src="scripts/register.js" type="text/javascript"></script>
@@ -115,8 +121,10 @@
     <div title="title-container">
       <h1>Overwatch University Camp 2018</h1>
       <h3>
-        <time datetime=" 2018-06-25">6/25</time> -
-        <time datetime=" 2018-06-29">6/29</time>, 2018
+        <time datetime=" 2018-06-25">6/25</time>
+        -
+        <time datetime=" 2018-06-29">6/29</time>
+        , 2018
       </h3>
     </div>
     <nav>
@@ -127,7 +135,8 @@
   </header>
 
   <section id="form-area">
-    <form onsubmit="validateForm()">
+    <form name="reg-form" onsubmit="return validateForm()"
+          action="reg_complete.html">
 
       <!-- Personal Information -->
       <fieldset>
@@ -154,10 +163,7 @@
                     onchange="updateAgeGroup(this)">
               <option></option>
             </select>
-          </li>
-          <li>
-            <label class="required">Group:</label>
-            <div class="inline" id="age-group"></div>
+            <div class="inline side-text" id="age-group"></div>
           </li>
         </ul>
       </fieldset>
@@ -232,23 +238,28 @@
             <ul class="check-list">
               <li>
                 <input type="checkbox" name="form-pref-class" value="offense"
-                       id="form-offense" onclick="displayClass(this)">
+                       id="form-offense" onclick="displayHeroClass(this)">
                 <label for="form-offense" class="fw-normal">Offense</label>
               </li>
               <li>
                 <input type="checkbox" name="form-pref-class" value="defense"
-                       id="form-defense" onclick="displayClass(this)">
+                       id="form-defense" onclick="displayHeroClass(this)">
                 <label for="form-defense" class="fw-normal">Defense</label>
               </li>
               <li>
                 <input type="checkbox" name="form-pref-class" value="tank"
-                       id="form-tank" onclick="displayClass(this)">
+                       id="form-tank" onclick="displayHeroClass(this)">
                 <label for="form-tank" class="fw-normal">Tank</label>
               </li>
               <li>
                 <input type="checkbox" name="form-pref-class" value="support"
-                       id="form-support" onclick="displayClass(this)">
+                       id="form-support" onclick="displayHeroClass(this)">
                 <label for="form-support" class="fw-normal">Support</label>
+              </li>
+              <li>
+                <input type="checkbox" name="form-pref-class" value="none"
+                       id="form-none">
+                <label for="form-none" class="fw-normal">Not Sure</label>
               </li>
             </ul>
           </li>
@@ -261,7 +272,7 @@
         </div>
         <ul>
           <li>
-            <label for="form-fav-hero" class="required">Favorite Character:</label>
+            <label for="form-fav-hero">Favorite Character:</label>
             <select name="form-fav-hero" id="form-fav-hero">
               <option>None</option>
               <option>Ana‎</option>
