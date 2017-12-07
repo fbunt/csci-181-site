@@ -32,8 +32,8 @@ function populateAgeValues() {
 /**
  * Updates the age group indicator based on the selected age.
  */
-function updateAgeGroup(ageInput) {
-    var age = parseInt(ageInput.value);
+function updateAgeGroup() {
+    var age = parseInt(getById("form-age").value);
     var text = "";
     if (Number.isInteger(age)) {
         text = "Group: ";
@@ -48,14 +48,23 @@ function updateAgeGroup(ageInput) {
     getById("age-group").innerHTML = text;
 }
 
+/**
+ * Indicate if the name value is too short.
+ */
 function tooShort(name) {
     return name.length < USERNAME_MIN_SIZE;
 }
 
+/**
+ * Indicate if the name value is too long.
+ */
 function tooLong(name) {
     return name.length > USERNAME_MAX_SIZE;
 }
 
+/**
+ * Validate the username value.
+ */
 function validateUsername(name) {
     return !tooShort(name) && !tooLong(name);
 }
@@ -82,31 +91,34 @@ function checkUsername() {
  *
  * @param radio the t size radio button selected
  */
-function updateTShirtCost(radio) {
+function updateTShirtCost() {
+    var radio = null;
+    var radios = document.getElementsByName("t-size");
+    for (var i = 0; i < radios.length; ++i) {
+        if (radios[i].checked) {
+            radio = radios[i];
+            break;
+        }
+    }
+    if (!radio) return;
+
     // base shirt cost
     var base = 10;
     // increment value
     var inc = 5;
+    var nameLen = getById("form-first-name").value.trim().length
     // base + (inc * t-size) + length of first name
     var text = "<span class='fw-bold'>Cost</span>: $";
-    text += base + (inc * parseInt(radio.value))
-            + getById("form-first-name").value.trim().length;
+    text += base + (inc * parseInt(radio.value)) + nameLen;
     getById("t-shirt-cost").innerHTML = text;
 }
 
 /**
  * Map the value to the correct element ID
  */
-function mapClassToContainerId(value) {
-    // Currently no need to do anything.
+function mapClassToImageId(value) {
+    // Currently no need to do anything more
     return value;
-}
-
-/**
- * Map the value to the correct image.
- */
-function getImageName(value) {
-    return "images/ow-heroes-" + value + ".jpg";
 }
 
 /**
@@ -116,15 +128,12 @@ function getImageName(value) {
  * @param check the checkbox most recently clicked
  */
 function displayHeroClass(check) {
+    // Don't care about last checkbox
+    if (check.value === "none") return;
 
-    var container = getById(mapClassToContainerId(check.value));
-    while (container.hasChildNodes()) {
-        container.removeChild(container.lastChild);
-    }
+    var container = getById(mapClassToImageId(check.value));
     if (check.checked) {
-        var img = document.createElement("img");
-        img.src = getImageName(check.value);
-        container.appendChild(img);
+        // Show image when checked
         container.style.display = "block"
     } else {
         // Completely hide the element
@@ -132,14 +141,12 @@ function displayHeroClass(check) {
     }
 }
 
-// TODO: Set event functions here instead of in html
-function onLoad() {
-    populateAgeValues();
-}
-
 
 // F O R M   V A L I D A T I O N   F U N C T I O N S
 
+/**
+ * Validate the Personal Info fieldset.
+ */
 function validatePersonalInfo() {
     var fname = getById(["form-first-name"]).value.trim();
     var lname = getById("form-last-name").value.trim();
@@ -149,12 +156,18 @@ function validatePersonalInfo() {
     return Boolean(fname && lname && gender && Number.isInteger(age));
 }
 
+/**
+ * Validate the Contact Info fieldset.
+ */
 function validateContactInfo() {
     var email = getById("form-email").value.trim();
     var phone = getById("form-telephone").value.trim();
     return Boolean(email && phone);
 }
 
+/**
+ * Validate the General Info fieldset.
+ */
 function validateGeneralInfo() {
     var uname = getById("form-username").value.trim();
     var sizeChecked = false;
@@ -165,6 +178,9 @@ function validateGeneralInfo() {
     return Boolean(validateUsername(uname) && sizeChecked);
 }
 
+/**
+ * Validate the Overwatch Info fieldset.
+ */
 function validateOverwatchInfo() {
     var checks = document.getElementsByName("form-pref-class");
     var checked = false;
@@ -175,14 +191,65 @@ function validateOverwatchInfo() {
     return Boolean(checked && expl);
 }
 
+/**
+ * Validate the entire form.
+ *
+ * @returns {boolean} the validity of the form
+ */
 function validateForm() {
-    if (validatePersonalInfo()
+    return validatePersonalInfo()
             && validateContactInfo()
             && validateGeneralInfo()
-            && validateOverwatchInfo()) {
-        return true;
-    } else {
-        alert("Please complete all required fields.");
-        return false;
+            && validateOverwatchInfo()
+}
+
+
+// I N I T I A L I Z A T I O N
+
+/**
+ * Initialize the page and set event listeners.
+ *
+ * In my experience, setting event handlers in any sort of markup (looking at
+ * you Android XML) only leads to headaches.
+ */
+function onLoad() {
+    // Form init
+    getById("reg-form").addEventListener("submit", function (event) {
+        if (!validateForm()) {
+            alert("Please complete all required fields.");
+            event.preventDefault();
+        }
+    }, false);
+    getById("reg-form").action = "reg_complete.html";
+
+    // First Name
+    getById("form-first-name")
+            .addEventListener("keyup", updateTShirtCost, false);
+
+    // Age
+    populateAgeValues();
+    getById("form-age").addEventListener("change", updateAgeGroup, false);
+
+    // Username
+    getById("form-username").addEventListener("keyup", checkUsername, false);
+
+    // T shirt size
+    var tsizeRadios = document.getElementsByName("t-size");
+    for (var i = 0; i < tsizeRadios.length; ++i) {
+        tsizeRadios[i].addEventListener("click", updateTShirtCost, false);
+    }
+
+    // Hero Class imgs
+    var classChecks = document.getElementsByName("form-pref-class");
+    for (var i = 0; i < classChecks.length; ++i) {
+        classChecks[i].addEventListener("click", function (event) {
+            displayHeroClass(event.target || event.srcElement);
+        }, false);
     }
 }
+
+
+// Execute initialization once HTML has been parsed.
+document.addEventListener("DOMContentLoaded", function() {
+    onLoad();
+});
