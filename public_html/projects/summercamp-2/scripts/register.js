@@ -71,17 +71,27 @@ function validateUsername(name) {
 
 /**
  * Displays an error message to the user if the username is not valid.
+ *
+ * Also changes the background color of the text box to indicate validity:
+ * light red for invalid and light green for valid.
  */
 function checkUsername() {
-    var text = getById("form-username").value.toString();
+    var input = getById("form-username");
+    var text = input.value.toString().trim();
     if (tooShort(text)) {
         getById("username-msg").innerHTML =
                 "Username must be at least 4 characters";
+        // Set to light red
+        input.style.backgroundColor = "#ff9b9b";
     } else if (tooLong(text)) {
         getById("username-msg").innerHTML =
                 "Username can't be more than 12 characters";
+        // Set to light red
+        input.style.backgroundColor = "#ff9b9b";
     } else {
         getById("username-msg").innerHTML = "";
+        // Set to light green
+        input.style.backgroundColor = "#bfffbf";
     }
 }
 
@@ -125,14 +135,35 @@ function mapClassToImageId(value) {
  * Displays an image representing the class selected. All classes can be
  * displayed together.
  *
+ * This function also makes the class checkboxes and "Not Sure" checkbox
+ * mutually exclusive such that when the not-sure box is checked, the others
+ * are unchecked and vice versa. In this way, the images are hidden when
+ * not-sure box is checked.
+ *
  * @param check the checkbox most recently clicked
  */
 function displayHeroClass(check) {
-    // Don't care about last checkbox
-    if (check.value === "none") return;
+    // Handle "none" checkbox
+    if (check.value === "none") {
+        if (check.checked) {
+            // Uncheck the other checkboxes
+            var checkboxes = document.getElementsByName("form-pref-class");
+            for (var i = 0; i < checkboxes.length; ++i) {
+                var cb = checkboxes[i];
+                if (cb !== check && cb.checked) {
+                    // Uncheck and fire event so this func is called again for
+                    // the checkbox that was "clicked".
+                    cb.click();
+                }
+            }
+        }
+        return;
+    }
 
     var container = getById(mapClassToImageId(check.value));
     if (check.checked) {
+        // Uncheck "none" checkbox but don't fire event
+        getById("form-none").checked = false;
         // Show image when checked
         container.style.display = "block"
     } else {
@@ -245,6 +276,11 @@ function onLoad() {
         classChecks[i].addEventListener("click", function (event) {
             displayHeroClass(event.target || event.srcElement);
         }, false);
+    }
+    // Hide images
+    var nodes = document.getElementsByClassName("class-img-container");
+    for (var i = 0; i < nodes.length; ++i) {
+        nodes[i].style.display = "none";
     }
 }
 

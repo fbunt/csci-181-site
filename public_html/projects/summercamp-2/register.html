@@ -71,8 +71,8 @@
     }
 
     .validation-msg {
-      display: inline;
       font-size: .6em;
+      color: #ff3f3f;
     }
 
     .fw-normal {
@@ -84,7 +84,6 @@
     }
 
     .post-msg {
-      display: inline;
       padding-left: 10px;
     }
 
@@ -110,12 +109,9 @@
       display: inline;
     }
 
-    .side-text {
+    .normal-side-text {
       font-size: 0.8em;
       padding-left: 10px;
-    }
-
-    .class-img {
     }
   </style>
   <script src="scripts/register.js" type="text/javascript"></script>
@@ -131,8 +127,7 @@
       <h3>
         <time datetime=" 2018-06-25">6/25</time>
         -
-        <time datetime=" 2018-06-29">6/29</time>
-        , 2018
+        <time datetime=" 2018-06-29">6/29</time>, 2018
       </h3>
     </div>
     <nav>
@@ -169,7 +164,7 @@
             <select name="form-age" id="form-age">
               <option></option>
             </select>
-            <div class="inline side-text" id="age-group"></div>
+            <div class="inline normal-side-text" id="age-group"></div>
           </li>
         </ul>
       </fieldset>
@@ -197,7 +192,7 @@
             <div id="username">
               <label for="form-username" class="required">Username:</label>
               <input type="text" name="username" id="form-username">
-              <div class="validation-msg" id="username-msg"></div>
+              <div class="inline validation-msg" id="username-msg"></div>
             </div>
           </li>
           <li>
@@ -214,7 +209,7 @@
               <input type="radio" name="t-size" value="4" id="form-size-xxl">
               <label for="form-size-xxl" class="fw-normal">XXL</label>
 
-              <div class="post-msg" id="t-shirt-cost"></div>
+              <div class="inline post-msg" id="t-shirt-cost"></div>
             </div>
           </li>
         </ul>
@@ -309,19 +304,19 @@
           </li>
         </ul>
         <div class="img-row">
-          <div class="class-img-container" id="offense" style="display: none">
+          <div class="class-img-container" id="offense">
             <img class="class-img" id="offense-img"
                  src="images/ow-heroes-offense.jpg">
           </div>
-          <div class="class-img-container" id="defense" style="display: none">
+          <div class="class-img-container" id="defense">
             <img class="class-img" id="defense-img"
                  src="images/ow-heroes-defense.jpg">
           </div>
-          <div class="class-img-container" id="tank" style="display: none">
+          <div class="class-img-container" id="tank">
             <img class="class-img" id="tank-img"
                  src="images/ow-heroes-tank.jpg">
           </div>
-          <div class="class-img-container" id="support" style="display: none">
+          <div class="class-img-container" id="support">
             <img class="class-img" id="support-img"
                  src="images/ow-heroes-support.jpg">
           </div>
