@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Portfolio: Percolation</title>
+  <title>Portfolio: Moon Lander</title>
 
   <!-- Bootstrap core CSS -->
   <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -46,41 +46,58 @@
 <div class="container">
 
   <!-- Portfolio Item Heading -->
-  <h1 class="my-4">Percolation
-    <small>CSCI 232 - Data Structures</small>
+  <h1 class="my-4">Moon Lander
+    <small>PHSX 330 - Computational Physics</small>
   </h1>
 
   <!-- Portfolio Item Row -->
   <div class="row">
     <div class="col-md-6">
-      <img class="img-fluid" src="images/percolation-main.png" alt="">
+      <img class="img-fluid" src="images/moonlander00.png" alt="">
+      <img class="img-fluid" src="images/moonlander01.png" alt="">
     </div>
 
     <div class="col-md-5">
       <h3 class="my-3">Assignment Description</h3>
       <p>
-        We were tasked with developing an implementation of a percolation
-        system. If a path exists from the top to the bottom through adjacent
-        open nodes, then the system "percolates". The implementation had to
-        allow for a variable grid size and be able to dynamically open nodes.
-        It also had to meet several memory and running-time requirements.
+        We had to develop a program that modeled the Earth-Moon system along
+        with an orbiting lander using the standard gravitational equations.
+        We then had to find a "boost" velocity and trajectory that would cause
+        lander to leave Earth's orbit and "land" on the Moon.
       </p>
       <h3 class="my-3">My Solution</h3>
       <p>
-        For my solution, I was able to identify and implement a solution for
-        the "backfill" issue which had not been discussed in class.
+        I was able implement a program that correctly modeled the system and
+        allowed the user to supply boost parameters. Through trial and error
+        I was able to find boost parameters that resulted in a landing.
       </p>
       <h3 class="my-3">Deliverables</h3>
       <ul>
-        <li>Percolation implementation</li>
-        <li>A class for calculating stats for the percolation system</li>
-        <li>A project readme answering assignment questions</li>
+        <li>An orbital simulation program</li>
+        <li>Boost parameters that resulted in a landing</li>
+        <li>Boost parameters that resulted in an "interesting" landing</li>
+        <li>A project report</li>
       </ul>
       <h3 class="my-3">Takeaways</h3>
       <ul>
-        <li>A much better understanding of the UnionFind data structure</li>
-        <li>An understanding of the Java memory model</li>
+        <li>Knowledge of natural units and how to use them in a simulation</li>
+        <li>
+          A better understanding of how to break up vectorized differential
+          equations for computational modeling.
+        </li>
       </ul>
+    </div>
+
+    <div class="col-md-6">
+      <img class="img-fluid" src="images/moonlander02.png" alt="">
+    </div>
+
+    <div class="col-md-6">
+      <img class="img-fluid" src="images/moonlander03.png" alt="">
+    </div>
+
+    <div class="col-md-6">
+      <img class="img-fluid" src="images/moonlander04.png" alt="">
     </div>
   </div>
   <!-- /.row -->
