@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Portfolio: Relaxation Solver</title>
+  <title>Portfolio: GeorgeDraw</title>
 
   <!-- Bootstrap core CSS -->
   <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -46,67 +46,58 @@
 <div class="container">
 
   <!-- Portfolio Item Heading -->
-  <h1 class="my-4">Relaxation Solver
-    <small>PHSX 330: Computational Physics</small>
+  <h1 class="my-4">GeorgeDraw
+    <small>CSCI 136 - Fund. of CS II</small>
   </h1>
 
   <!-- Portfolio Item Row -->
   <div class="row">
-
     <div class="col-md-6">
-      <img class="img-fluid" src="images/relaxation000.png"
-           alt="Initial conditions of system before relaxation">
-      <img class="img-fluid" src="images/relaxation001.png"
-           alt="System after a few relaxation iterations">
+      <img class="img-fluid" src="images/georgedraw00.png"
+           alt="Image of GeorgeDraw app">
+      <img class="img-fluid padding-md-top" src="images/georgedraw01.png"
+           alt="Image of GeorgeDraw circles with different detail levels">
     </div>
 
     <div class="col-md-5">
       <h3 class="my-3">Assignment Description</h3>
       <p>
-        For this assignment, we had to write a program to solve a system of
-        equations with initial conditions using an iterative relaxation
-        method.
+        We were given the GeorgeDraw program and had to make additions to it
+        while making sure that nothing broke the unit tests. The changes could
+        include a new feature, adding more colors or a new shape, adding more
+        unit tests or even fixing any issues/bugs.
       </p>
       <h3 class="my-3">My Solution</h3>
       <p>
-        My solution allowed the user to choose between two different relaxation
-        methods and to specify how many iterations to carry out on the system.
+        My solution included several changes and additions to the program. I
+        added a new circle shape with complete with unit test and several new
+        colors to the selection. I also refactored and fixed the square shape
+        so that it could grow along any diagonal. Finally, I refactored the
+        kock segment and the new circle so that they could be drawn with a
+        variable amount of detail and placed a control on the UI so that a user
+        could set the amount of detail.
       </p>
-      <h3>Deliverables</h3>
+      <h3 class="my-3">Deliverables</h3>
       <ul>
-        <li>Relaxation solver</li>
-        <li>Assignment Report</li>
+        <li>The altered GeorgeDraw program</li>
+        <li>A writeup summarizing my changes</li>
       </ul>
       <h3 class="my-3">Takeaways</h3>
       <ul>
-        <li>An better understanding of the Gauss-Seidel relaxation method</li>
-        <li>A much better understanding of Python's 3D plotting library</li>
+        <li>More experience with Java's Swing and AWT APIs</li>
+        <li>
+          Learned to cap koch segment's detail at 5. 10 -> 2 GB for one line
+        </li>
       </ul>
     </div>
 
-    <div class="col-md-4">
-      <img class="img-fluid" src="images/relaxation002.png"
-           alt="System almost fully relaxed">
-    </div>
-
-    <div class="col-md-4">
-      <img class="img-fluid" src="images/relaxation003.png"
-           alt="System fully relaxed">
-    </div>
-
-    <div class="col-md-4 vspace-bottom-md">
-      <img class="img-fluid" src="images/relaxation100.png"
-           alt="Initial conditions of a different system before relaxation">
-    </div>
-
-    <div class="col-md-4 vspace-bottom-md">
-      <img class="img-fluid" src="images/relaxation101.png"
-           alt="Second system fully relaxed">
+    <div class="col-md-6 vspace-top-md vspace-bottom-md">
+      <img class="img-fluid" src="images/georgedraw02.png"
+           alt="GeorgeDraw koch segments with different levels of detail">
     </div>
 
   </div>
   <!-- /.row -->
-
 </div>
 <!-- /.container -->
 
@@ -114,7 +105,6 @@
 <footer class="py-5 bg-dark">
   <div class="container">
     <p class="m-0 text-center text-white">
-      <!-- Template Reference -->
       <a href="https://startbootstrap.com/template-overviews/portfolio-item/">
         Portfolio-Item Template
       </a>
